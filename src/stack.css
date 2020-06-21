@@ -3,7 +3,9 @@
 	z-index: 1000;
 	padding:0;
 	list-style:none;
-	pointer-events:none
+	pointer-events:none;
+	height:100%;
+	width:100%;
 }
 .stack__item {
 	background:#fff;

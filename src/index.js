@@ -1,36 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './stack.css';
 import './modernizr.js';
 import Stack from './stack';
 
-class Fancy extends React.Component {
 
-  state = {
-    stack: undefined,
-  }
-
-  componentDidMount() {
-    const { options } = this.props;
+const CardStack = ({
+  size, options, onStack, children,
+}) => {
+  useEffect(() => {
     const stack = new Stack({
       target: document.getElementById('stack'),
       options,
     });
-    this.props.onStack(stack);
-  }
+    onStack(stack);
+  }, []);
 
-  render() {
-    const { effect, size, children } = this.props;
-    return (
-      <div className="stack-container">
-        <ul id="stack" className="stack stack--yuda" style={size}>
-        {children && children.map(item => (
-          <li key={item.key} className="stack__item">
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>);
-  }
+  return (
+    <div id="stack" className="stack stack--yuda" style={size}>
+      {children}
+    </div>
+  );
 }
 
-export default Fancy;
+const CardStackItem = props => {
+  console.log(props);
+  const { children, className, ...rema } = props;
+  return <div className={`stack__item ${className}`} { ...rema }>
+    {children}
+  </div>
+};
+
+export {
+  CardStack,
+  CardStackItem,
+};

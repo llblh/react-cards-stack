@@ -11,7 +11,7 @@
 ### 示例
 
 ``` js
-import Reactcardstack from '@carpenter/react-tencent-captcha';
+import {CardStack, CardStackItem} from '@carpenter/react-tencent-captcha';
 
 export default class Demo extends Component {
 
@@ -36,18 +36,18 @@ export default class Demo extends Component {
 
   render() {
     return <div className="example">
-      <Reactcardstack
+      <CardStack
         options={{
+          perspective: 500,
           infinite: true,
         }}
-        size={{ width: 400, height: 214 }}
+        size={{ width: 200, height: 300 }}  // 默认宽高100%
         onStack={this.onStack}
       >
-        <div key="1" className="example_item1">1</div>
-        <div key="2" className="example_item2">2</div>
-        <div key="3" className="example_item3">3</div>
-        <div key="4" className="example_item4">4</div>
-      </Reactcardstack>
+        {[1,2,3,4].map(item => (
+          <CardStackItem className={`example_item${item + 1}`} key={item}>{item}</CardStackItem>
+        ))}
+      </CardStack>
       <button onClick={() => this.onRun('no')}>no</button>
       <button onClick={() => this.onRun('yes')}>yes</button>
     </div>
