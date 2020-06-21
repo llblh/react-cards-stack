@@ -1,0 +1,37 @@
+
+.example {
+  margin: 50px auto;
+  width: 400px;
+}
+.example_item1,
+.example_item2,
+.example_item3,
+.example_item4,
+.example_item5,
+.example_item6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.example_item1 {
+  background-color: #35598d;
+}
+.example_item2 {
+  background-color: #358d71;
+}
+.example_item3 {
+  background-color: #46358d;
+}
+.example_item4 {
+  background-color: #68358d;
+}
+.example_item5 {
+  background-color: #8d3583;
+}
+.example_item6 {
+  background-color: #8d7b35;
+}
