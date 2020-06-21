@@ -23,7 +23,6 @@ const CardStack = ({
 }
 
 const CardStackItem = props => {
-  console.log(props);
   const { children, className, ...rema } = props;
   return <div className={`stack__item ${className}`} { ...rema }>
     {children}
