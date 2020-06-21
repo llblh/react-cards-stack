@@ -43,10 +43,10 @@ export default class Demo extends Component {
         size={{ width: 400, height: 214 }}
         onStack={this.onStack}
       >
-        <div className="example_item1">1</div>
-        <div className="example_item2">2</div>
-        <div className="example_item3">3</div>
-        <div className="example_item4">4</div>
+        <div key="1" className="example_item1">1</div>
+        <div key="2" className="example_item2">2</div>
+        <div key="3" className="example_item3">3</div>
+        <div key="4" className="example_item4">4</div>
       </Reactcardstack>
       <button onClick={() => this.onRun('no')}>no</button>
       <button onClick={() => this.onRun('yes')}>yes</button>

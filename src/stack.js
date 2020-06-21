@@ -153,7 +153,7 @@ class Stack {
       classie.remove(currentItem, action === 'accept' ? 'stack__item--accept' : 'stack__item--reject');
       self.items[self.current].style.zIndex = self.options.visible + 1;
       self.isAnimating = false;
-      if (callback) callback();
+      if (callback) callback(self);
       if (!self.options.infinite && self.current === 0) {
         self.hasEnded = true;
         self.options.onEndStack(self);

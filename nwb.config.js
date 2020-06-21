@@ -8,5 +8,10 @@ module.exports = {
         react: 'React'
       }
     }
+  },
+  webpack: {
+    extractCSS: {
+      filename: 'react-cards-stack.css'
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import './lib/modernizr.js';
-import Stack from './lib/stack';
-import './lib/stack.css';
+import './stack.css';
+import './modernizr.js';
+import Stack from './stack';
 
 class Fancy extends React.Component {
 
