@@ -11,7 +11,7 @@
 ### 示例
 
 ``` js
-import {CardStack, CardStackItem} from '@carpenter/react-tencent-captcha';
+import {CardStack, CardStackItem} from '@carpenter/react-cards-stack';
 
 export default class Demo extends Component {
 
